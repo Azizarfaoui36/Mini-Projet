@@ -1,0 +1,17 @@
+<!--barre de recherche-->
+<div class="zone d-flex flex-column">
+  <div class="input-group m-5">
+    <input type="search" class="form-control rounded" placeholder="What are you looking for" [(ngModel)]="Keyword" aria-label="Search" aria-describedby="search-addon" />
+    <button type="button" class="button-85" (click)="getwithfilter()">search</button>
+  </div>
+  <input type="range" (change)="changeValue($event)" id="range" min="200" max="1000"/>
+  <input type="text" [(ngModel)]="prix">
+</div>
+<!--partie affichage voiture-->
+<div class="box m-5">
+  <div class="row">
+    <div class="col-md-3 col-sm-12" *ngFor="let i of AllCars">
+      <app-carslist [cars]="i"></app-carslist>
+    </div>
+    </div>  
+</div>

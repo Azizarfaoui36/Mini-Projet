@@ -1,0 +1,71 @@
+{
+  "Cars": [
+    {
+      "Marque": "Golf 7",
+      "Photo": "../../assets/cars/Golf7.png",
+      "Prix": 280,
+      "Dispo": true,
+      "Location": "Manouba",
+      "Typedecarbirant": "essence",
+      "nbplace": 5,
+      "gear": "Automatic",
+      "id": 1
+    },
+    {
+      "Marque": "Peugeot 301",
+      "Photo": "../../assets/cars/Peugeot301.png",
+      "Prix": 200,
+      "Dispo": true,
+      "Location": "Manouba",
+      "Typedecarbirant": "essence",
+      "nbplace": 5,
+      "gear": "Manual",
+      "id": 2
+    },
+    {
+      "id": 3,
+      "Marque": "Mercedes Benz",
+      "Photo": "../../assets/cars/MercedesBenz.png",
+      "Prix": 800,
+      "Dispo": true,
+      "Location": "Manouba",
+      "Typedecarbirant": "essence",
+      "nbplace": 5,
+      "gear": "Automatic"
+    },
+    {
+      "Marque": "Toyota Yaris",
+      "Photo": "../../assets/cars/ToyotaYaris.png",
+      "Prix": 255,
+      "Dispo": true,
+      "Location": "Manouba",
+      "Typedecarbirant": "essence",
+      "nbplace": 5,
+      "gear": "Manual",
+      "id": 4
+    },
+    {
+      "Marque": "Peugeot 208",
+      "Photo": "../../assets/cars/Peugeot208.png",
+      "Prix": 230,
+      "Dispo": true,
+      "Location": "Sousse",
+      "Typedecarbirant": "essence",
+      "nbplace": 5,
+      "gear": "Manual",
+      "id": 5
+    }
+  ],
+  "login": [
+    {
+      "email": "arfaouiaziz@email.com",
+      "password": "123456789",
+      "id": 1
+    },
+    {
+      "email": "fatoum@email.com",
+      "password": "456987",
+      "id": 2
+    }
+  ]
+}

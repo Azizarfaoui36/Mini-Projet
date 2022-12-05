@@ -1,0 +1,67 @@
+<div class="container">
+    <h1 class="text-center">Cars Management</h1>
+<button type="button" class="btn btn-success" (click)="changeForm()">ADD CAR</button>
+<!--Partie formulaire-->
+<form [formGroup]="CarForm" class="bordure" [hidden]="hideform" (ngSubmit)="Add()">
+    <label>Marque:</label>
+    <input type="text" class="form-control" formControlName="Marque">
+    <label>Photo:</label>
+    <input type="text" class="form-control" formControlName="Photo">
+    <label>Price:</label>
+    <input type="number" class="form-control" formControlName="Prix" > 
+    <label>Location:</label>
+    <input type="text" class="form-control" formControlName="Location">
+    <label>Fuel Type:</label>
+    <select formControlName="Typedecarbirant">
+        <option value="essence">Essence</option>
+        <option value="gasoil">Gasoil</option>
+    </select><br>
+    <label for="">Nombre Of places:</label>
+    <input type="number" class="form-control" formControlName="nbplace">
+    <label for="">Type Of gear:</label>
+    <select formControlName="gear">
+        <option value="Manual">Manual</option>
+        <option value="Automatic">Automatic</option>
+    </select><br>
+    <label>
+        <input type="checkbox" formControlName="Dispo"> Availble
+    </label>
+    <br>
+    <button class="btn btn-dark"> Add</button>
+    <input type="reset" class="btn btn-secondary" value="Clear" /> 
+</form>
+<!--Partie affichage-->
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Photo</th>
+            <th>Price <i class="fa-solid fa-hand-holding-dollar"></i></th>
+            <th>Availble</th>
+            <th>Location <i class="fa-solid fa-location-dot"></i></th>
+            <th>Fuel type <i class="fa-solid fa-gas-pump"></i></th>
+            <th>nbplace</th>
+            <th>gear <i class="fa-solid fa-gears"></i></th>
+            <th>Delete Car</th>
+            <th>Change Value</th>
+            <th>Save changes</th>
+        </tr>            
+    </thead>
+    <tbody *ngFor="let l of Allcars">
+        <tr>
+            <td>{{l.id}}</td>
+           <!-- <td>{{l.Photo}}</td> -->
+            <td><img [src]="l.Photo" alt="" class="rounded-circle"></td>
+            <td>{{l.Prix}}</td>
+            <td><input type="checkbox"  disabled [checked]="l.Dispo">Availble</td>
+            <td><span class="badge bg-danger">{{l.Location}}</span></td>
+            <td>{{l.Typedecarbirant}}</td>
+            <td><span class="badge bg-danger">{{l.nbplace}}</span></td>
+            <td>{{l.gear}}</td>
+            <td><button type="button" class="btn btn-danger" (click)="Delete(l.id)">Delete it</button></td>
+            <td> <input type="button" value="Change" class="btn btn-warning" (click)="Change(l)" ></td>
+            <td> <input type="button" value="Save" class="btn btn-success" (click)="Update(l)" ></td>
+        </tr>    
+    </tbody>
+</table>
+</div>

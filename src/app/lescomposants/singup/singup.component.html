@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="login form">
+    <div class="registration form">
+      <h1>Singup</h1>
+      <form [formGroup]="SignupForm" (submit)="Add()">
+        <input type="text" placeholder="Enter your email" class="form-control" formControlName='email'/>
+        <input type="password" placeholder="Create a password" class="form-control" formControlName='password'/>
+        <input type="button" class="button" value="Singup" (click)="Add()"/>
+      </form>
+      <div class="singup">
+        <span class="singup" (click)="change()">Already have an account?
+          <label for="check">Login</label>
+        </span>
+      </div>
+    </div>
+</div>
